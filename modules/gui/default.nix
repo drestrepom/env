@@ -25,9 +25,9 @@
     };
   };
   programs.dconf.enable = true;
-  users.users.nixos.extraGroups = ["video"];
+  users.users.drestrepo.extraGroups = ["video"];
 
-  home-manager.users.nixos = {
+  home-manager.users.drestrepo = {
     home = {
       packages = [
         pkgs.gnome.nautilus

@@ -300,7 +300,7 @@
     }
   '');
 in {
-  home-manager.users.nixos.programs.rofi = {
+  home-manager.users.drestrepo.programs.rofi = {
     enable = true;
     pass.enable = true;
     package = pkgs.rofi-wayland;

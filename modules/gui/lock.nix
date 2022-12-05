@@ -4,7 +4,7 @@
   ...
 }: {
   security.pam.services.swaylock.text = "auth include login";
-  home-manager.users.nixos = {
+  home-manager.users.drestrepo = {
     programs.swaylock.settings = {
       daemonize = true;
       screenshots = true;

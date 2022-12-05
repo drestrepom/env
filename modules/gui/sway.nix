@@ -15,7 +15,7 @@
       ];
     };
   };
-  home-manager.users.nixos.wayland.windowManager.sway = {
+  home-manager.users.drestrepo.wayland.windowManager.sway = {
     enable = true;
     xwayland = true;
     systemdIntegration = true;

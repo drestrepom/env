@@ -7,7 +7,7 @@
   environment.binsh = "${pkgs.dash}/bin/dash";
   users = {
     defaultUserShell = pkgs.zsh;
-    users.nixos.shell = pkgs.zsh;
+    users.drestrepo.shell = pkgs.zsh;
   };
 
   programs.zsh = {
@@ -19,7 +19,7 @@
     '';
   };
 
-  home-manager.users.nixos.programs.zsh = {
+  home-manager.users.drestrepo.programs.zsh = {
     enable = true;
     enableCompletion = true;
     enableSyntaxHighlighting = true;

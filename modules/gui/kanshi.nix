@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home-manager.users.nixos = {
+  home-manager.users.drestrepo = {
     services.kanshi = {
       enable = true;
       profiles = {

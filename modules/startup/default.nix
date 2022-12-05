@@ -1,5 +1,5 @@
 {
-  services.getty.autologinUser = "nixos";
+  services.getty.autologinUser = "drestrepo";
   programs.zsh.loginShellInit = ''
     if [ "$(id --user "$USER")" -ge "1000" ] && [ "$(tty)" = "/dev/tty1" ]; then
       exec sway

@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  home-manager.users.nixos.programs.alacritty = {
+  home-manager.users.drestrepo.programs.alacritty = {
     enable = true;
     settings = {
       env.TERM = "alacritty";

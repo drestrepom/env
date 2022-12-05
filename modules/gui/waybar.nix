@@ -1,5 +1,5 @@
 {
-  home-manager.users.nixos.programs.waybar = {
+  home-manager.users.drestrepo.programs.waybar = {
     enable = true;
     settings = {
       mainBar = {
