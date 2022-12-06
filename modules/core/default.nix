@@ -16,7 +16,7 @@
   in
     builtins.trace "Linux: ${packages.kernel.version}" packages;
 
-  documentation.drestrepo.enable = false;
+  documentation.nixos.enable = false;
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;

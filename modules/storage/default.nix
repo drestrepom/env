@@ -3,7 +3,7 @@
     systemd-boot.enable = true;
     efi = {
       canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi";
+      efiSysMountPoint = "/boot/EFI";
     };
   };
 
@@ -16,7 +16,7 @@
       device = "/dev/disk/by-partlabel/data";
       fsType = "ext4";
     };
-    "/boot/efi" = {
+    "/boot/EFI" = {
       device = "/dev/disk/by-partlabel/ESP";
       fsType = "vfat";
     };
