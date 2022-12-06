@@ -1,16 +1,6 @@
 {config, ...}: {
   virtualisation = {
     docker.enable = true;
-    virtualbox = {
-      host = {
-        enable = true;
-        enableExtensionPack = true;
-      };
-      guest = {
-        enable = true;
-        x11 = true;
-      };
-    };
   };
 
   boot.binfmt.emulatedSystems = [
