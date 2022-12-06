@@ -20,11 +20,11 @@
 
   users.users = {
     root = {
-      hashedPassword = "$6$K.LcVGhhOm6tIwK6$73yska.1TGbYr52WU7JdW8z/LDFPj5RF7HWdBjsRe2xfbVML5nTjA4j/9Dtw98LnmNwYzcKaLZ0qxe/hy7JrY.";
+      hashedPassword = "$5$/tA2O3iAxESoLgX7$bc.UHwSSkUJbXvESztKqMlkk.dhrFSSVleHhcFLkcJ9";
     };
     nixos = {
       isNormalUser = true;
-      hashedPassword = "$6$K.LcVGhhOm6tIwK6$73yska.1TGbYr52WU7JdW8z/LDFPj5RF7HWdBjsRe2xfbVML5nTjA4j/9Dtw98LnmNwYzcKaLZ0qxe/hy7JrY.";
+      hashedPassword = "$5$/tA2O3iAxESoLgX7$bc.UHwSSkUJbXvESztKqMlkk.dhrFSSVleHhcFLkcJ9";
       description = "Daniel Salazar";
       home = "/home/nixos";
       group = "users";
