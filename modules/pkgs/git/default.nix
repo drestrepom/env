@@ -3,13 +3,13 @@
   editor,
   ...
 }: {
-  home-manager.users.drestrepo = {
+  home-manager.users.nixos = {
     programs = {
       git = {
         enable = true;
         package = pkgs.gitAndTools.gitFull;
-        userName = "Diego Restrepo";
-        userEmail = "restrepomesadiego@gmail.com";
+        userName = "Daniel Salazar";
+        userEmail = "podany270895@gmail.com";
         extraConfig = {
           core.editor = "${editor}/bin/code --wait";
           diff.tool = "${editor}/bin/code";

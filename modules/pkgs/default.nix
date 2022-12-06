@@ -11,7 +11,7 @@
     ./timedoctor
   ];
 
-  home-manager.users.drestrepo = {
+  home-manager.users.nixos = {
     home.packages = [
       makesPkg
       pkgs._1password-gui-beta

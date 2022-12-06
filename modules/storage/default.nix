@@ -23,7 +23,7 @@
   };
 
   services.udisks2.enable = true;
-  home-manager.users.drestrepo.services.udiskie = {
+  home-manager.users.nixos.services.udiskie = {
     enable = true;
     automount = true;
     notify = true;

@@ -1,5 +1,5 @@
 {
-  home-manager.users.drestrepo.programs.mako = {
+  home-manager.users.nixos.programs.mako = {
     enable = true;
 
     layer = "top";

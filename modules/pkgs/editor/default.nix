@@ -313,7 +313,7 @@
   };
 in {
   environment.variables.EDITOR = "${editor}/bin/code --wait";
-  home-manager.users.drestrepo.programs.vscode = {
+  home-manager.users.nixos.programs.vscode = {
     enable = true;
     package = editor;
     mutableExtensionsDir = false;

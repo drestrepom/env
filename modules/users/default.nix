@@ -20,13 +20,13 @@
 
   users.users = {
     root = {
-      hashedPassword = "$6$K.LcVGhhOm6tIwK6$73yska.1TGbYr52WU7JdW8z/LDFPj5RF7HWdBjsRe2xfbVML5nTjA4j/9Dtw98LnmNwYzcKaLZ0qxe/hy7JrY.";
+      hashedPassword = "$6$NKlUfhjaPNhm263V$GGMcRBxRBIPvTZ9JVAL90a0AvrdnBQbzo6XLERrX1.QxGPbhC7TlcA5Bfqh6k3TsLkd/OpcPplO19o8J6AG7t/";
     };
-    drestrepo = {
+    nixos = {
       isNormalUser = true;
-      hashedPassword = "$6$K.LcVGhhOm6tIwK6$73yska.1TGbYr52WU7JdW8z/LDFPj5RF7HWdBjsRe2xfbVML5nTjA4j/9Dtw98LnmNwYzcKaLZ0qxe/hy7JrY.";
-      description = "Diego Restrepo";
-      home = "/home/drestrepo";
+      hashedPassword = "$6$Cmzt0OYRh1Ra9nCG$52hnMtWek1aWFbCN44T9AmZrFVws4Lus7vvOObgnJWpCtIJs.v0mUYW/3a4SFm3kOxJbbV/xaYoAu9S9Wc8lb0";
+      description = "Daniel Salazar";
+      home = "/home/nixos";
       group = "users";
       extraGroups = ["wheel"];
     };
@@ -36,13 +36,13 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     users = {
-      drestrepo = {
+      nixos = {
         programs.home-manager.enable = true;
         targets.genericLinux.enable = true;
         systemd.user.startServices = true;
         home = {
-          username = "drestrepo";
-          homeDirectory = "/home/drestrepo";
+          username = "nixos";
+          homeDirectory = "/home/nixos";
           stateVersion = config.system.stateVersion;
         };
       };

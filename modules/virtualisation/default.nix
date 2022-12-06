@@ -14,5 +14,5 @@
   ];
 
   users.groups.docker = {};
-  users.users.drestrepo.extraGroups = ["docker" "vboxusers"];
+  users.users.nixos.extraGroups = ["docker" "vboxusers"];
 }
