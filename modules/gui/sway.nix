@@ -8,9 +8,8 @@
     sway = {
       enable = true;
       extraPackages = [
-        pkgs.grim
+        pkgs.flameshot
         pkgs.pavucontrol
-        pkgs.sway-contrib.grimshot
         pkgs.wl-clipboard
       ];
     };
@@ -167,8 +166,8 @@
         "${modifier}+Control+Shift+Up" = "move workspace to output up";
         "${modifier}+Control+Shift+Right" = "move workspace to output right";
 
-        "Print" = "exec grimshot --notify save screen ${screenshot_dir}";
-        "Shift+Print" = "exec grimshot --notify copy area";
+        "Print+Shift" = "exec flameshot full -p ${screenshot_dir}";
+        "Print" = "exec flameshot gui";
 
         "XF86AudioLowerVolume" = "exec pamixer -d 5";
         "XF86AudioRaiseVolume" = "exec pamixer -i 5";

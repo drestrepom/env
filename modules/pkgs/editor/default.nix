@@ -300,7 +300,7 @@
     "telemetry.telemetryLevel" = "off";
     "update.mode" = "none";
     "update.showReleaseNotes" = false;
-    "window.zoomLevel" = 1;
+    "window.zoomLevel" = 0;
     "window.menuBarVisibility" = "toggle";
     "workbench.activityBar.visible" = true;
     "workbench.editor.enablePreview" = true;
@@ -311,12 +311,19 @@
     "workbench.startupEditor" = "none";
     "workbench.colorTheme" = "GitHub Dark";
   };
+  keybindings = [
+    {
+      key = "ctrl+d";
+      command = "editor.action.duplicateSelection";
+    }
+  ];
 in {
   environment.variables.EDITOR = "${editor}/bin/code --wait";
   home-manager.users.nixos.programs.vscode = {
     enable = true;
     package = editor;
     mutableExtensionsDir = false;
+    inherit keybindings;
     inherit extensions;
     inherit userSettings;
   };
