@@ -17,11 +17,11 @@
 
   fileSystems."/home" = {
     device = "/dev/disk/by-partlabel/data";
-    fsType = "vfat";
+    fsType = "ext4";
   };
   fileSystems."/" = {
     device = "/dev/disk/by-partlabel/root";
-    fsType = "vfat";
+    fsType = "ext4";
   };
   swapDevices = [
     {
