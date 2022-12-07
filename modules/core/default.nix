@@ -10,7 +10,7 @@
   ];
 
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "usb_storage" "sd_mod"];
-  boot.kernelModules = ["kvm-amd"];
+  boot.kernelModules = ["kvm-intel"];
   boot.kernelPackages = let
     packages = pkgs.linuxPackages_latest;
   in
