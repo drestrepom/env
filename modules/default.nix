@@ -8,6 +8,7 @@
     ./startup
     ./storage
     ./secrets
+    ./browser
     ./tz
     ./users
     ./virtualisation
