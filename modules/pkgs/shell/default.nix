@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  config,
   ...
 }: {
   environment.shells = [pkgs.zsh];
@@ -16,6 +17,7 @@
     interactiveShellInit = ''
       export DIRENV_WARN_TIMEOUT=1h
       source <(direnv hook zsh)
+      ssh-add ${config.sops.secrets.ssh_key.path}
     '';
   };
 

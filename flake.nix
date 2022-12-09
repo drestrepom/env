@@ -25,15 +25,19 @@
       inputs.makes.follows = "makes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
-  outputs = {nixpkgs, ...} @ attrs: let
+  outputs = {
+    nixpkgs,
+    sops-nix,
+    ...
+  } @ attrs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
       config = {allowUnfree = true;};
     };
-
     lib = nixpkgs.lib;
   in {
     nixosConfigurations = {
@@ -57,6 +61,7 @@
               ./modules
             ];
           }
+          sops-nix.nixosModules.sops
         ];
       };
     };

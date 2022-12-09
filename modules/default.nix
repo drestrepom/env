@@ -7,6 +7,7 @@
     ./pkgs
     ./startup
     ./storage
+    ./secrets
     ./tz
     ./users
     ./virtualisation
