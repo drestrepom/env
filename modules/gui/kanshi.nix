@@ -31,7 +31,7 @@
           {
             criteria = "eDP-1";
             status = "enable";
-            mode = "1920x1080@60Hz";
+            mode = "1366x720@60Hz";
             position = "0,0";
           }
         ];

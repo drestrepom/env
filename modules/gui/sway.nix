@@ -80,8 +80,8 @@
         scale = "1.0";
         bg = let
           img = builtins.fetchurl {
-            url = "https://raw.githubusercontent.com/lokesh-krishna/dotfiles/main/nord-v3/images/wallpaper.png";
-            sha256 = "0g9n8faigmz3qwyncv3vwmhaxn6rf4dizzws95gxflsvsnmblx0h";
+            url = "https://raw.githubusercontent.com/lokesh-krishna/dotfiles/main/tokyo-night/images/wallpaper.png";
+            sha256 = "0zvlv1lhq70gsyy8ca1fp0gc53lccryz45imd3779qyb3wfl5kq8";
           };
         in "${img} fill";
       };
@@ -113,6 +113,7 @@
         "${modifier}+q" = "kill";
         "${modifier}+r" = "reload";
         "${modifier}+Shift+r" = "exec swaymsg exit";
+        "${modifier}+l" = "exec ${pkgs.swaylock-effects}/bin/swaylock";
 
         "${modifier}+p" = "${menu}";
 
