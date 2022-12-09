@@ -26,17 +26,24 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     sops-nix.url = "github:Mic92/sops-nix";
+
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     sops-nix,
+    fenix,
     ...
   } @ attrs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
       config = {allowUnfree = true;};
+      overlays = [fenix.overlays.default];
     };
     lib = nixpkgs.lib;
   in {
@@ -61,6 +68,7 @@
               ./modules
             ];
           }
+
           sops-nix.nixosModules.sops
         ];
       };

@@ -1,6 +1,7 @@
 {
   makesPkg,
   pkgs,
+  fenix,
   ...
 }: {
   imports = [
@@ -15,11 +16,13 @@
     home.packages = [
       makesPkg
       pkgs._1password-gui-beta
+      pkgs._1password
       pkgs.awscli
       pkgs.binutils
       pkgs.brave
       pkgs.coreutils
       pkgs.direnv
+      pkgs.google-chrome
       pkgs.htop
       pkgs.jq
       pkgs.just
@@ -30,6 +33,7 @@
       pkgs.parted
       pkgs.python311
       pkgs.qbittorrent
+      pkgs.rust-analyzer-nightly
       pkgs.shadow
       pkgs.sops
       pkgs.terraform
@@ -37,6 +41,14 @@
       pkgs.vlc
       pkgs.yq
       pkgs.wget
+
+      (pkgs.fenix.complete.withComponents [
+        "cargo"
+        "clippy"
+        "rust-src"
+        "rustc"
+        "rustfmt"
+      ])
     ];
 
     programs = {
