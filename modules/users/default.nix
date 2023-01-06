@@ -25,7 +25,7 @@
     nixos = {
       isNormalUser = true;
       hashedPassword = "$5$/tA2O3iAxESoLgX7$bc.UHwSSkUJbXvESztKqMlkk.dhrFSSVleHhcFLkcJ9";
-      description = "Daniel Salazar";
+      description = "Diego Restrepo";
       home = "/home/nixos";
       group = "users";
       extraGroups = ["wheel"];

@@ -2,6 +2,7 @@
   lib,
   pkgs,
   config,
+  pythonOnNix,
   ...
 }: {
   environment.shells = [pkgs.zsh];
@@ -15,9 +16,27 @@
     enable = true;
     autosuggestions.enable = true;
     interactiveShellInit = ''
-      export DIRENV_WARN_TIMEOUT=1h
-      source <(direnv hook zsh)
-      ssh-add ${config.sops.secrets.ssh_key.path}
+            export DIRENV_WARN_TIMEOUT=1h
+            source <(direnv hook zsh)
+
+            ssh-add ${config.sops.secrets.ssh_key.path}
+            export INTEGRATES_API_TOKEN="$(cat ${config.sops.secrets.INTEGRATES_API_TOKEN.path})"
+
+      function ol() {
+        eval $(
+          ${pythonOnNix.aws-okta-processor-latest-python39}/bin/bin/aws-okta-processor authenticate \
+            --user "$(cat ${config.sops.secrets."okta/user".path})" \
+            --pass "$(cat ${config.sops.secrets."okta/password".path})" \
+            --organization "fluidattacks.okta.com" \
+            --application "https://fluidattacks.okta.com/home/amazon_aws/0oa9ahz3rfx1SpStS357/272" \
+            --silent \
+            --duration 32400 \
+            --environment \
+            --no-aws-cache
+        )
+        export DEV_AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+        export DEV_AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+      }
     '';
   };
 

@@ -13,4 +13,10 @@
   sops.secrets."okta/password" = {
     owner = config.users.users.nixos.name;
   };
+  sops.secrets."okta/user" = {
+    owner = config.users.users.nixos.name;
+  };
+  sops.secrets.INTEGRATES_API_TOKEN = {
+    owner = config.users.users.nixos.name;
+  };
 }
