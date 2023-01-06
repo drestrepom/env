@@ -17,10 +17,11 @@
     DefaultSearchProviderEnabled = true;
     DefaultSearchProviderSearchURL = "https://duckduckgo.com/?q={searchTerms}";
     ExtensionInstallForcelist = [
-      "kbfnbcaeplbcioakkpcpgfkobkghlhen" # Grammarly: Grammar Checker and Writing App
       "aeblfdkhhhdcdjpifhhbdiojplfjncoa" # 1Password
       "mobhfbcgjoleoljhpkkdhopdiemlocka" # RPass
       "aapbdbdomjkkjkaonfhkkikfgjllcleb" # Google Translator
+      "oldceeleldhonbafppcapldpdifcinji" # Language Tools
+      "neebplgakaahbhdphmkckjjcegoiijjo" # Keepa
     ];
     HighContrastEnabled = true;
     ImportBookmarks = false;

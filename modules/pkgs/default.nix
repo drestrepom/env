@@ -23,12 +23,16 @@
       pkgs.coreutils
       pkgs.direnv
       pkgs.google-chrome
+      pkgs.gcc
       pkgs.htop
       pkgs.jq
       pkgs.just
       pkgs.kubectl
       pkgs.gnugrep
       pkgs.nodejs
+      pkgs.nmap
+      pkgs.sqlmap
+      pkgs.zi
       pkgs.pamixer
       pkgs.parted
       pkgs.python311
