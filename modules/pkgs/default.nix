@@ -2,6 +2,7 @@
   makesPkg,
   pkgs,
   fenix,
+  devenv,
   ...
 }: {
   imports = [
@@ -20,6 +21,7 @@
       pkgs.awscli
       pkgs.binutils
       pkgs.brave
+      pkgs.cachix
       pkgs.coreutils
       pkgs.direnv
       pkgs.google-chrome
@@ -35,16 +37,20 @@
       pkgs.zi
       pkgs.pamixer
       pkgs.parted
+      pkgs.poetry
       pkgs.python311
       pkgs.qbittorrent
       pkgs.rust-analyzer-nightly
       pkgs.shadow
       pkgs.sops
+      pkgs.spotify
       pkgs.terraform
+      pkgs.translate-shell
       pkgs.unzip
       pkgs.vlc
       pkgs.yq
       pkgs.wget
+      devenv.devenv
 
       (pkgs.fenix.complete.withComponents [
         "cargo"

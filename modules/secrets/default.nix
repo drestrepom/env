@@ -19,4 +19,7 @@
   sops.secrets.INTEGRATES_API_TOKEN = {
     owner = config.users.users.nixos.name;
   };
+  sops.secrets.CACHIX_AUTH_TOKEN = {
+    owner = config.users.users.nixos.name;
+  };
 }

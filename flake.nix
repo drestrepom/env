@@ -1,6 +1,9 @@
 {
   description = "My NixOS System configuration";
-
+  nixConfig = {
+    extra-trusted-public-keys = "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw=";
+    extra-S = "https://devenv.cachix.org";
+  };
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
 
@@ -31,11 +34,14 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    devenv.url = "github:cachix/devenv/latest";
   };
 
   outputs = {
     nixpkgs,
     sops-nix,
+    devenv,
     fenix,
     ...
   } @ attrs: let
@@ -56,6 +62,7 @@
           editor = pkgs.vscode;
           makes = attrs.makes;
           makesPkg = attrs.makes.packages.${system}.default;
+          devenv = devenv.packages.${system};
           pythonOnNix = attrs.pythonOnNix.packages.${system};
           swayModifier = "Mod4";
           timedoctor = attrs.timedoctor.packages.${system}.default;

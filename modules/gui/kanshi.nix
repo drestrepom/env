@@ -24,7 +24,7 @@
             criteria = "DP-2";
             status = "enable";
             mode = "2560x1080@75Hz";
-            position = "0,0";
+            position = "180,180";
           }
         ];
         undocked.outputs = [

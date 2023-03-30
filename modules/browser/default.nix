@@ -22,6 +22,7 @@
       "aapbdbdomjkkjkaonfhkkikfgjllcleb" # Google Translator
       "oldceeleldhonbafppcapldpdifcinji" # Language Tools
       "neebplgakaahbhdphmkckjjcegoiijjo" # Keepa
+      "omdakjcmkglenbhjadbccaookpfjihpa" # vpn
     ];
     HighContrastEnabled = true;
     ImportBookmarks = false;

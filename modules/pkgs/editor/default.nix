@@ -58,8 +58,8 @@
       {
         name = "gitlens";
         publisher = "eamodio";
-        version = "2022.11.804";
-        sha256 = "06fivcfszynlynv5khpi5dzwk230jlgh4xmdq7ffhblnwp78j3i1";
+        version = "2023.3.2405";
+        sha256 = "Qhlm0kYGM0a6MT+xj2D985gK723BFAwfae/BqJYaJ0Q=";
       }
       {
         name = "gc-excelviewer";
@@ -153,6 +153,24 @@
         sha256 = "15i1xcd7p6xfb8kj90irznf4xw48mmwzc528zrk3kiniy9nkbcd4";
       }
       {
+        name = "sarif-viewer";
+        publisher = "MS-SarifVSCode";
+        version = "3.3.3";
+        sha256 = "xDsQPXu8eojcHdxSfQd+3hncx+4qsVOPVfKDfZcRfRs=";
+      }
+      {
+        name = "vscode-eslint";
+        publisher = "dbaeumer";
+        version = "2.2.6";
+        sha256 = "1yZeyLrXuubhKzobWcd00F/CdU824uJDTkB6qlHkJlQ=";
+      }
+      {
+        name = "fluidattacks";
+        publisher = "fluidattacks";
+        version = "0.33.0";
+        sha256 = "sha256-g40H/qaZ4rncJyllaM6ZBzDzHCssqBSf+dCAc7EedfU=";
+      }
+      {
         name = "just";
         publisher = "skellock";
         version = "2.0.0";
@@ -181,6 +199,12 @@
         publisher = "humao";
         version = "0.25.1";
         sha256 = "19yc3hvhyr2na741z6ajgigxckagvfrcq3h6y958bl4107vxjb0d";
+      }
+      {
+        name = "nix-env-selector";
+        publisher = "arrterian";
+        version = "1.0.9";
+        sha256 = "TkxqWZ8X+PAonzeXQ+sI9WI+XlqUHll7YyM7N9uErk0=";
       }
       # {
       #   name = "rust-analyzer";
@@ -295,9 +319,11 @@
     "files.insertFinalNewline" = true;
     "files.trimFinalNewlines" = true;
     "files.trimTrailingWhitespace" = true;
+    "git.openRepositoryInParentFolders" = "always";
     "gitlens.showWelcomeOnInstall" = false;
     "gitlens.showWhatsNewAfterUpgrades" = false;
-    "python.analysis.autoSearchPaths" = false;
+    "python.analysis.autoSearchPaths" = true;
+    "python.analysis.autoImportCompletions" = true;
     "python.analysis.diagnosticMode" = "openFilesOnly";
     "python.formatting.provider" = "none";
     "python.languageServer" = "Pylance";
@@ -350,7 +376,6 @@ in {
   home-manager.users.nixos.programs.vscode = {
     enable = true;
     package = editor;
-    mutableExtensionsDir = false;
     inherit keybindings;
     inherit extensions;
     inherit userSettings;
