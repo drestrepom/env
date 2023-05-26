@@ -12,27 +12,33 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["xhci_pci" "nvme" "rtsx_pci_sdmmc"];
+  boot.initrd.availableKernelModules = ["xhci_pci" "nvme" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];
+  boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/4429e971-6b92-4392-a3a7-b16840955f31";
+    device = "/dev/disk/by-partlabel/root";
     fsType = "ext4";
   };
 
-  fileSystems."/home" = {
-    device = "/dev/disk/by-uuid/b314581e-bc34-48af-8e1b-d985d889b008";
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-partlabel/nix";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/58F7-803B";
+    device = "/dev/disk/by-uuid/0169-3277";
     fsType = "vfat";
   };
 
+  fileSystems."/home" = {
+    device = "/dev/disk/by-partlabel/data";
+    fsType = "ext4";
+  };
+
   swapDevices = [
-    {device = "/dev/disk/by-uuid/44ebb372-a968-469a-90ae-383e312f8a33";}
+    {device = "/dev/disk/by-partlabel/swap";}
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -42,9 +48,9 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp0s31f6.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

@@ -10,7 +10,7 @@
     ./git
     ./shell
     ./terminal
-    ./timedoctor
+    # ./timedoctor
   ];
 
   home-manager.users.nixos = {
@@ -68,4 +68,5 @@
       };
     };
   };
+  programs.ssh.startAgent = true;
 }

@@ -58,8 +58,8 @@
       {
         name = "gitlens";
         publisher = "eamodio";
-        version = "2023.3.2405";
-        sha256 = "Qhlm0kYGM0a6MT+xj2D985gK723BFAwfae/BqJYaJ0Q=";
+        version = "2023.5.805";
+        sha256 = "C0dPIZlUdYPkONuGOtqt8s/Ed+PxrP+1Xppjdmo3woE=";
       }
       {
         name = "gc-excelviewer";
@@ -167,8 +167,8 @@
       {
         name = "fluidattacks";
         publisher = "fluidattacks";
-        version = "0.33.0";
-        sha256 = "sha256-g40H/qaZ4rncJyllaM6ZBzDzHCssqBSf+dCAc7EedfU=";
+        version = "0.42.0";
+        sha256 = "sha256-gtnxDEGmejyOzcJPsBRkgXlS+V5cqWa4xa9CeOYt75A=";
       }
       {
         name = "just";
@@ -206,12 +206,12 @@
         version = "1.0.9";
         sha256 = "TkxqWZ8X+PAonzeXQ+sI9WI+XlqUHll7YyM7N9uErk0=";
       }
-      # {
-      #   name = "rust-analyzer";
-      #   publisher = "rust-lang";
-      #   version = "0.3.1309";
-      #   sha256 = "15d2d4312bfxpfwja56icf48r22adn937gqynwi4hxxqk0daamh6";
-      # }
+      {
+        name = "rainbow-csv";
+        publisher = "mechatroner";
+        version = "3.7.0";
+        sha256 = "y16AGyLo7P8WiYpK14MV0jhVeVvqkBEpRh62yR52jhI=";
+      }
     ]
     ++ [pkgs.fenix.rust-analyzer-vscode-extension];
   userSettings = {

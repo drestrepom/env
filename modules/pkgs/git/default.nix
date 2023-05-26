@@ -9,7 +9,7 @@
         enable = true;
         package = pkgs.gitAndTools.gitFull;
         userName = "Diego Restrepo";
-        userEmail = "drestrepo@fluidttacks.com";
+        userEmail = "drestrepo@fluidattacks.com";
         extraConfig = {
           core.editor = "${editor}/bin/code --wait";
           diff.tool = "${editor}/bin/code";

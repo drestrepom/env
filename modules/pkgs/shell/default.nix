@@ -24,6 +24,9 @@
             ssh-add ${config.sops.secrets.ssh_key.path}
             export INTEGRATES_API_TOKEN="$(cat ${config.sops.secrets.INTEGRATES_API_TOKEN.path})"
             export CACHIX_AUTH_TOKEN="$(cat ${config.sops.secrets.CACHIX_AUTH_TOKEN.path})"
+            export UNIVERSE_API_TOKEN="$(cat ${config.sops.secrets.UNIVERSE_API_TOKEN.path})"
+            export OKTA_EMAIL="$(cat ${config.sops.secrets."okta/user".path})"
+            export OKTA_PASS="$(cat ${config.sops.secrets."okta/password".path})"
 
       function ol() {
         eval $(

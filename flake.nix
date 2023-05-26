@@ -1,9 +1,5 @@
 {
   description = "My NixOS System configuration";
-  nixConfig = {
-    extra-trusted-public-keys = "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw=";
-    extra-S = "https://devenv.cachix.org";
-  };
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
 

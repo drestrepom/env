@@ -15,7 +15,7 @@
     BookmarkBarEnabled = true;
     DefaultBrowserSettingEnabled = false;
     DefaultSearchProviderEnabled = true;
-    DefaultSearchProviderSearchURL = "https://duckduckgo.com/?q={searchTerms}";
+    DefaultSearchProviderSearchURL = "https://www.google.com/search?q={searchTerms}";
     ExtensionInstallForcelist = [
       "aeblfdkhhhdcdjpifhhbdiojplfjncoa" # 1Password
       "mobhfbcgjoleoljhpkkdhopdiemlocka" # RPass

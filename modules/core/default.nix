@@ -36,7 +36,5 @@
     pulse.enable = true;
   };
 
-  programs.ssh.startAgent = true;
-
   system.stateVersion = "22.05";
 }

@@ -65,16 +65,16 @@
       ];
       timeouts = [
         {
-          timeout = 5 * 60;
+          timeout = 60 * 60;
           command = "${pkgs.swaylock-effects}/bin/swaylock";
         }
         {
-          timeout = 15 * 60;
+          timeout = 60 * 60;
           command = "${pkgs.sway}/bin/swaymsg 'output * dpms off'";
           resumeCommand = "${pkgs.sway}/bin/swaymsg 'output * dpms on'";
         }
         {
-          timeout = 30 * 60;
+          timeout = 60 * 60;
           command = "${pkgs.systemd}/bin/systemctl suspend";
         }
       ];

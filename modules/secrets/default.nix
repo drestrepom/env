@@ -22,4 +22,7 @@
   sops.secrets.CACHIX_AUTH_TOKEN = {
     owner = config.users.users.nixos.name;
   };
+  sops.secrets.UNIVERSE_API_TOKEN = {
+    owner = config.users.users.nixos.name;
+  };
 }

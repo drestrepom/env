@@ -10,7 +10,7 @@
       useOSProber = true;
     };
   };
-
+  imports = [./auto-detected.nix];
   services.udisks2.enable = true;
   home-manager.users.nixos.services.udiskie = {
     enable = true;

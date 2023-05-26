@@ -17,14 +17,12 @@
       }
     ];
   };
-
+  users.mutableUsers = true;
   users.users = {
     root = {
-      hashedPassword = "$5$/tA2O3iAxESoLgX7$bc.UHwSSkUJbXvESztKqMlkk.dhrFSSVleHhcFLkcJ9";
     };
     nixos = {
       isNormalUser = true;
-      hashedPassword = "$5$/tA2O3iAxESoLgX7$bc.UHwSSkUJbXvESztKqMlkk.dhrFSSVleHhcFLkcJ9";
       description = "Diego Restrepo";
       home = "/home/nixos";
       group = "users";
