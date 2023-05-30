@@ -5,7 +5,7 @@
   sops,
   ...
 }: {
-  sops.age.keyFile = "/home/nixos/.config/sops/age/keys.txt";
+  sops.age.keyFile = "/var/lib/sops-nix/key.txt";
   sops.defaultSopsFile = ./secrets.yaml;
   sops.secrets.ssh_key = {
     owner = config.users.users.nixos.name;

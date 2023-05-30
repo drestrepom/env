@@ -9,20 +9,17 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.kernelModules = ["kvm-intel"];
   boot.kernelPackages = let
     packages = pkgs.linuxPackages_latest;
   in
     builtins.trace "Linux: ${packages.kernel.version}" packages;
 
-  documentation.nixos.enable = false;
+  documentation.nixos.enable = true;
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
   hardware.enableAllFirmware = true;
-  hardware.enableRedistributableFirmware = true;
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   services.printing.enable = true;
 
