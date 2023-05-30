@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  sops,
   ...
 }: {
   security.sudo = {
@@ -17,9 +18,10 @@
       }
     ];
   };
-  users.mutableUsers = true;
+  users.mutableUsers = false;
   users.users = {
     root = {
+      password = "052030";
     };
     nixos = {
       isNormalUser = true;
@@ -27,6 +29,7 @@
       home = "/home/nixos";
       group = "users";
       extraGroups = ["wheel"];
+      password = "052030";
     };
   };
 
