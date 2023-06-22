@@ -16,17 +16,17 @@
     enable = true;
     autosuggestions.enable = true;
     interactiveShellInit = ''
-            export NPM_CONFIG_PREFIX=${config.users.users.nixos.home}/.npm-global
-            export PATH="$PATH:$NPM_CONFIG_PREFIX/bin"
-            export DIRENV_WARN_TIMEOUT=1h
-            source <(direnv hook zsh)
+      export NPM_CONFIG_PREFIX=${config.users.users.nixos.home}/.npm-global
+      export PATH="$PATH:$NPM_CONFIG_PREFIX/bin"
+      export DIRENV_WARN_TIMEOUT=1h
+      source <(direnv hook zsh)
 
-            ssh-add ${config.sops.secrets.ssh_key.path}
-            export INTEGRATES_API_TOKEN="$(cat ${config.sops.secrets.INTEGRATES_API_TOKEN.path})"
-            export CACHIX_AUTH_TOKEN="$(cat ${config.sops.secrets.CACHIX_AUTH_TOKEN.path})"
-            export UNIVERSE_API_TOKEN="$(cat ${config.sops.secrets.UNIVERSE_API_TOKEN.path})"
-            export OKTA_EMAIL="$(cat ${config.sops.secrets."okta/user".path})"
-            export OKTA_PASS="$(cat ${config.sops.secrets."okta/password".path})"
+      ssh-add ${config.sops.secrets.ssh_key.path}
+      export INTEGRATES_API_TOKEN="$(cat ${config.sops.secrets.INTEGRATES_API_TOKEN.path})"
+      export CACHIX_AUTH_TOKEN="$(cat ${config.sops.secrets.CACHIX_AUTH_TOKEN.path})"
+      export UNIVERSE_API_TOKEN="$(cat ${config.sops.secrets.UNIVERSE_API_TOKEN.path})"
+      export OKTA_EMAIL="$(cat ${config.sops.secrets."okta/user".path})"
+      export OKTA_PASS="$(cat ${config.sops.secrets."okta/password".path})"
 
       function ol() {
         eval $(
@@ -53,6 +53,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = [
+        "aws"
         "1password"
         "branch"
         "colorize"

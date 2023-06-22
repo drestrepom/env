@@ -23,6 +23,7 @@
       "oldceeleldhonbafppcapldpdifcinji" # Language Tools
       "neebplgakaahbhdphmkckjjcegoiijjo" # Keepa
       "omdakjcmkglenbhjadbccaookpfjihpa" # vpn
+      "glnpjglilkicbckjpbgcfkogebgllemb" # okta
     ];
     HighContrastEnabled = true;
     ImportBookmarks = false;

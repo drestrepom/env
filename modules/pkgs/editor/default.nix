@@ -212,6 +212,12 @@
         version = "3.7.0";
         sha256 = "y16AGyLo7P8WiYpK14MV0jhVeVvqkBEpRh62yR52jhI=";
       }
+      {
+        name = "aws-toolkit-vscode";
+        publisher = "AmazonWebServices";
+        version = "1.75.0";
+        sha256 = "sha256-iVT2qaDLDfMFh3nkzdg0u+2VoHIKmQR1G7j3pGLh+xI=";
+      }
     ]
     ++ [pkgs.fenix.rust-analyzer-vscode-extension];
   userSettings = {
@@ -358,6 +364,7 @@
     "workbench.startupEditor" = "none";
     "workbench.colorTheme" = "GitHub Dark";
     "workbench.iconTheme" = "vscode-icons";
+    "github.gitAuthentication" = true;
   };
   keybindings = [
     {
@@ -375,6 +382,7 @@ in {
   environment.variables.AWS_SECRET_ACCESS_KEY = "CPjZnlkJ7h7/c3/50BG9mBX+Wf1ntfN54auNJnZ2";
   home-manager.users.nixos.programs.vscode = {
     enable = true;
+    mutableExtensionsDir = false;
     package = editor;
     inherit keybindings;
     inherit extensions;

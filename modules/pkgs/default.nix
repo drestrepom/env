@@ -16,9 +16,10 @@
   home-manager.users.nixos = {
     home.packages = [
       makesPkg
+      pkgs.inetutils
       pkgs._1password-gui-beta
       pkgs._1password
-      pkgs.awscli
+      pkgs.awscli2
       pkgs.binutils
       pkgs.brave
       pkgs.cachix
