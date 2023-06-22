@@ -1,5 +1,6 @@
 {
   imports = [
+    ./hardware
     ./core
     ./gui
     ./network
