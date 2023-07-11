@@ -49,4 +49,15 @@
       };
     };
   };
+
+  services.minecraft-servers = {
+    enable = false;
+    openFirewall = true;
+    eula = true;
+    servers.manuel = {
+      enable = true;
+      openFirewall = true;
+    };
+  };
+  security.polkit.enable = true;
 }

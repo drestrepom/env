@@ -36,12 +36,15 @@
     };
 
     devenv.url = "github:cachix/devenv/latest";
+
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
   };
 
   outputs = {
     nixpkgs,
     sops-nix,
     devenv,
+    nix-minecraft,
     fenix,
     ...
   } @ attrs: let
@@ -49,7 +52,7 @@
     pkgs = import nixpkgs {
       inherit system;
       config = {allowUnfree = true;};
-      overlays = [fenix.overlays.default];
+      overlays = [fenix.overlays.default nix-minecraft.overlay];
     };
     lib = nixpkgs.lib;
   in {
@@ -72,6 +75,7 @@
           {
             imports = [
               attrs.homeManager.nixosModules.home-manager
+              nix-minecraft.nixosModules.minecraft-servers
               ./modules
             ];
           }
