@@ -218,6 +218,18 @@
         version = "1.75.0";
         sha256 = "sha256-iVT2qaDLDfMFh3nkzdg0u+2VoHIKmQR1G7j3pGLh+xI=";
       }
+      {
+        name = "vscode-typescript-next";
+        publisher = "ms-vscode";
+        version = "5.2.20230622";
+        sha256 = "sha256-Dy+EjwNyM5BLUarJaOEcNMa0oUnYRfFxxZDC5PFRNoM=";
+      }
+      {
+        name = "prettier-vscode";
+        publisher = "esbenp";
+        version = "9.16.0";
+        sha256 = "sha256-MF+mPhX4Q6wi7FxfaWG6fNJHY6EsTWOX+9UmN0iIZGU=";
+      }
     ]
     ++ [pkgs.fenix.rust-analyzer-vscode-extension];
   userSettings = {

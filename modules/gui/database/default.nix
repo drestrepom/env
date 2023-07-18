@@ -2,7 +2,7 @@
 : {
   config.services = {
     redis.servers.tic_tac = {
-      enable = true;
+      enable = false;
     };
   };
 }

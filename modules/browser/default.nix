@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = [
     (pkgs.writeShellScriptBin "browser" ''
-      exec ${pkgs.brave}/bin/brave \
+      exec ${pkgs.google-chrome}/bin/google \
         --user-data-dir=/data/browser/data \
         "$@"
     '')

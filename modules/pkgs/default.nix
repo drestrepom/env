@@ -3,6 +3,7 @@
   pkgs,
   fenix,
   devenv,
+  system,
   ...
 }: {
   imports = [
@@ -21,7 +22,6 @@
       pkgs._1password
       pkgs.awscli2
       pkgs.binutils
-      pkgs.brave
       pkgs.cachix
       pkgs.coreutils
       pkgs.direnv
@@ -52,8 +52,7 @@
       pkgs.yq
       pkgs.wget
       devenv.devenv
-
-      (pkgs.fenix.complete.withComponents [
+      (pkgs.fenix.latest.withComponents [
         "cargo"
         "clippy"
         "rust-src"
@@ -70,4 +69,19 @@
     };
   };
   programs.ssh.startAgent = true;
+  systemd = {
+    user.services.polkit-gnome-authentication-agent-1 = {
+      description = "polkit-gnome-authentication-agent-1";
+      wantedBy = ["graphical-session.target"];
+      wants = ["graphical-session.target"];
+      after = ["graphical-session.target"];
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
+      };
+    };
+  };
 }
