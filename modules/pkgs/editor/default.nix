@@ -58,8 +58,8 @@
       {
         name = "gitlens";
         publisher = "eamodio";
-        version = "2023.5.805";
-        sha256 = "C0dPIZlUdYPkONuGOtqt8s/Ed+PxrP+1Xppjdmo3woE=";
+        version = "2023.9.1305";
+        sha256 = "lt05Dp8SM5DXKs3VpULS0V9RI7awCqCs2MoqJipgWtA=";
       }
       {
         name = "gc-excelviewer";
@@ -390,11 +390,11 @@
   ];
 in {
   environment.variables.EDITOR = "${editor}/bin/code --wait";
-  environment.variables.AWS_ACCESS_KEY_ID = "ASIAS722FD7JGYVBPB6P";
-  environment.variables.AWS_SECRET_ACCESS_KEY = "CPjZnlkJ7h7/c3/50BG9mBX+Wf1ntfN54auNJnZ2";
+  environment.variables.NIXPKGS_ALLOW_UNFREE = "1";
+  environment.variables.LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [pkgs.stdenv.cc.cc]}";
   home-manager.users.nixos.programs.vscode = {
     enable = true;
-    mutableExtensionsDir = false;
+    mutableExtensionsDir = true;
     package = editor;
     inherit keybindings;
     inherit extensions;
